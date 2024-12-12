@@ -1,0 +1,24 @@
+// Colors
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #FFFAFA;
+
+// Shadows
+$card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+// Spacing
+$spacing-unit: 1rem;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+@mixin full-height-container {
+    background-color: $background-color;
+    min-height: 100vh;
+    padding: $spacing-unit * 2;
+    overflow-x: hidden;
+}  

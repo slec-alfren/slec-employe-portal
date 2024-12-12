@@ -1,0 +1,58 @@
+@use "./global/variables/_variables.scss" as *;
+@use "./global/_forms.scss" as *;
+
+
+// Login Page Styles
+.login-container {
+  @include full-height-container;
+
+  // Header styles
+  .header {
+    padding: $spacing-unit;
+    
+    .company-logo {
+      height: 40px;
+      width: auto;
+      margin-right: $spacing-unit;
+    }
+
+    .company-name {
+      margin: 0;
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+
+  // Main content area
+  .main-content {
+    @include flex-center;
+    padding: $spacing-unit * 2;
+
+    // Banner section
+    .banner-section {
+      height: 100%;
+      
+      .banner-image {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+
+    // Login form section
+    .login-form-section {
+      // Reference the new reusable form class
+      .login-card {
+        @extend .form-card;
+        
+        .login-button {
+          width: 100%;
+          padding: $spacing-unit * 0.75;
+          font-weight: 500;
+          margin-top: $spacing-unit;
+        }
+      }
+    }
+  }
+}
