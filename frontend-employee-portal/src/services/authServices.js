@@ -30,6 +30,32 @@ export const authService = {
     }
 };
 
+export const logout = async () => {
+    try {
+        const token = localStorage.getItem('token');
+        
+        // Make API call to logout endpoint
+        await axios.post(`${API_URL}/logout`, {}, {
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/json'
+            }
+        });
+
+        // Clear local storage
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+
+        return true;
+    } catch (error) {
+        console.error('Logout error:', error);
+        // Still clear local storage even if the API call fails
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+        throw error;
+    }
+};
+
 export const fetchEmployeeInfo = async (userId, token) => {
     const response = await fetch(`${API_URL}/employee/${userId}`, {
         headers: {

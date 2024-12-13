@@ -81,7 +81,7 @@ const Login = () => {
                                         Forgot Password?
                                     </a>
                                 </div>
-                                <button className="btn btn-primary login-button" type="submit">
+                                <button className="btn btn-primary btn-p-100" type="submit">
                                     Login
                                 </button>
                                 <div className="form-group mt-5 mb-5">

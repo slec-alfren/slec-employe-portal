@@ -1,10 +1,9 @@
 @use "./global/variables/_variables.scss" as *;
 @use "./global/_forms.scss" as *;
-@use "./global/_btns.scss" as *;	
 
 
 // Login Page Styles
-.login-container {
+.dashboard-container {
   @include full-height-container;
 
   // Header styles
@@ -41,14 +40,6 @@
       }
     }
 
-    // Login form section
-    .login-form-section {
-      // Reference the new reusable form class
-      .login-card {
-        @extend .form-card;
-        
-        @extend .btn-p-100;
-      }
-    }
+    
   }
 }

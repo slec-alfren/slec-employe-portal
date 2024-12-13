@@ -41,17 +41,7 @@ class AuthController extends Controller
         return response()->json(['message' => 'Logged out successfully']);
     }
 
-    public function getEmployees(Request $request)
-    {
-    try {
-        // Your employee fetching logic here
-        $employees = Employee::all(); // or your specific query
-        return response()->json($employees);
-    } catch (\Exception $e) {
-        return response()->json(['error' => $e->getMessage()], 500);
-    }
-    }
-
+    
     public function getEmployeeById($id)
     {
         try {

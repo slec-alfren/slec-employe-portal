@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
 
 class Employee extends Authenticatable
@@ -32,6 +33,8 @@ class Employee extends Authenticatable
         'job_level_id',
         'floor_location',
         'active',
+        'created_at',
+        'updated_at',
     ];
 
     protected $hidden = [

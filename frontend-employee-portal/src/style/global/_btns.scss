@@ -1,0 +1,9 @@
+@use "./variables/_variables.scss" as *;
+
+//Difene button styles
+.btn-p-100 {
+    width: 100%;
+    padding: $spacing-unit * 0.75;
+    font-weight: 500;
+    margin-top: $spacing-unit;
+  }
